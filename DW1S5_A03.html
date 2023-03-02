@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Matrícula</title>
+    </head>
+
+    <body>
+        <h1>Matrícula aluno</h1>
+        <form>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required pattern="[a-zA-Z\s]+">
+                <br><br>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" required pattern="(\d{3}\.\d{3}\.\d{3}-\d{2}) | (\d{11})" placeholder="xxx.xxx.xxx-xx">
+                <br><br>
+
+                <label for="dt nasc">Data nascimento:</label>
+                <input type="date" id="dt nasc" required min="1907-01-01" max="2022-03-02">
+                <br><br>
+
+                <label for="sexo">Sexo:</label>
+                <input type="radio" id="feminino">
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="masculino" checked>
+                <label for="masculino">Masculino</label>
+                <br><br>
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" required pattern="[a-zA-Z\s]+">
+                <label for="estados">Estado:</label>
+                <select id="estados">
+                    <option value="Acre">AC</option>
+                    <option value="Alagoas">AL</option>
+                    <option value="Amapá">AP</option>
+                    <option value="Amazonas">AM</option>
+                    <option value="Bahia">BA</option>
+                    <option value="Ceará">CE</option>
+                    <option value="Espírito Santo">ES</option>
+                    <option value="Goiás">GO</option>
+                    <option value="Maranhão">MA</option>
+                    <option value="Mato Grosso">MT</option>
+                    <option value="Mato Grosso do Sul">MS</option>
+                    <option value="Minas Gerais">MG</option>
+                    <option value="Pará">PA</option>
+                    <option value="Paraíba">PB</option>
+                    <option value="Paraná">PR</option>
+                    <option value="Pernambuco">PE</option>
+                    <option value="Piauí">PI</option>
+                    <option value="Rio de Janeiro">RJ</option>
+                    <option value="Rio Grande do Norte">RN</option>
+                    <option value="Rio Grande do Sul">RS</option>
+                    <option value="Rondônia">RO</option>
+                    <option value="Roraima">RR</option>
+                    <option value="Santa Catarina">SC</option>
+                    <option value="São Paulo">SP</option>
+                    <option value="Sergipe">SE</option>
+                    <option value="Tocantins">TO</option>
+                    <option value="Distrito Federal">DF</option>
+                </select>
+            </fieldset>
+
+            <br><fieldset>
+                <legend>Dados da Matrícula</legend>
+
+                <label for="curso">Curso:</label>
+                <br>
+                <input type="radio" id="ads">
+                <label for="ads">Análise e Desenvolvimento de Sistemas</label>
+                <input type="radio" id="eng">
+                <label for="eng">Engenharia Mecânica</label>
+                <input type="radio" id="tsi">
+                <label for="tsi">Tecnologia em Sistemas para Internet</label>
+                <br><br>
+
+                <label for="disciplina">Disciplina(s) Optativa:</label>
+                <br>
+                <input type="checkbox" id="robo">
+                <label for="robo">Programação de Robôs</label>
+                <input type="checkbox" id="ia">
+                <label for="ia">Desenvolvimento de Inteligências Artificiais</label>
+                <br>
+                <input type="checkbox" id="modelagem comp">
+                <label for="modelagem comp">Modelagem Computacional</label>
+                <input type="checkbox" id="docker">
+                <label for="docker">Ambientes Isolados: Desenvolvimento com Docker</label>
+                <br><br>
+
+                <label for="sugestão">Sugestão de disciplinas futuras:</label>
+                <br>
+                <textarea id="sugestão" rows="8" cols="70"></textarea>
+            </fieldset>
+        </form>
+
+        <br><img width=550 height=1 src="https://www.colorhexa.com/ffffff.png"/>
+        <button type="button"><b>Enviar</b></button>
+    </body>
+</html>
